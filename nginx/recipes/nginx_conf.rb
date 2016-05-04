@@ -1,4 +1,8 @@
 
+service "nginx" do
+   action :nothing
+end
+
 deploy 'nginx.conf' do
    repo 'https://github.com/igitcode/app_server_config.git' 
    deploy_to '/apps/python/aws/'
