@@ -8,5 +8,5 @@ deploy 'nginx.conf' do
       "/apps/pythons/aws/nginx.conf" => "/etc/nginx/conf.d/nginx.conf"
    ) 
 
-   notifies :restart, 'service[nginx]'
+   notifies :start, 'service[nginx]'
 end
