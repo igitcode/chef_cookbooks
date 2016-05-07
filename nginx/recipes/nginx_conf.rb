@@ -1,17 +1,4 @@
 
-#service "nginx" do
-#   action :nothing
-#end
-
-#create python application directory structure
-directory '/apps/python/aws' do
-   owner 'ec2-user'
-   group 'ec2-user'
-   mode '0775'
-   action :create
-   recursive true
-end
-
 #create python virtual env
 directory '/apps/chef_test/python/env' do
    owner 'ec2-user'
@@ -45,7 +32,7 @@ end
 cookbook_file '/apps/chef_test/python/uwsgi.ini' do
    source 'uwsgi.ini'
    owner 'ec2-user'
-   owner 'ec2-user'
+   group 'ec2-user'
    mode '0664'
    action :create_if_missing
 end

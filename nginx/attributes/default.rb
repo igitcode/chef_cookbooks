@@ -1,1 +1,1 @@
-default['python_apps'] = ['app1','app2']
+default['python_apps'] = ['app1', 'app2']
