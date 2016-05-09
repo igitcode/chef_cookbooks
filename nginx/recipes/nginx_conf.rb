@@ -1,5 +1,5 @@
 
-create python virtual env
+#create python virtual env
 directory '/apps/chef_test/python/env' do
    owner 'ec2-user'
    group 'ec2-user'
