@@ -1,5 +1,5 @@
 
-#create python virtual env
+create python virtual env
 directory '/apps/chef_test/python/env' do
    owner 'ec2-user'
    group 'ec2-user'
@@ -10,7 +10,7 @@ end
 
 # create python application dir
 #### trying to loop thru apps defined in attributes file
-node[:python_apps].each do |app|
+node.default[:python_apps].each do |app|
    directory '/apps/chef_test/python/env/sites/#{app}' do
       owner 'ec2-user'
       group 'ec2-user'
