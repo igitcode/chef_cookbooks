@@ -1,1 +1,1 @@
-default['python_apps'] = ['app1', 'app2']
+node.default[:python_apps] = ['app1', 'app2']
